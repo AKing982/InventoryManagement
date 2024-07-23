@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagement.Controllers;
 
+[Route("/api/login")]
+[ApiController]
 public class LoginController : ControllerBase
 {
     private readonly UserManager<IdentityUser> _userManager;

@@ -1,4 +1,4 @@
-﻿import {useState} from "react";
+﻿import React, {useState} from "react";
 import {Grid, TextField} from "@mui/material";
 import {Button} from "reactstrap";
 
@@ -61,3 +61,5 @@ const Login: React.FC<LoginProps> = (props) => {
     );
     
 }
+
+export default Login;

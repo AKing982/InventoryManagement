@@ -17,6 +17,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.MapGet("/api/hello", () => "Hello, World!");
 
 app.MapControllerRoute(
     name: "default",
