@@ -9,14 +9,14 @@ namespace InventoryManagement.Controllers;
 [ApiController]
 public class LoginController : ControllerBase
 {
-    private readonly UserManager<IdentityUser> _userManager;
-    private readonly SignInManager<IdentityUser> _signInManager;
+    private UserManager<IdentityUser> _userManager;
+    private SignInManager<IdentityUser> _signInManager;
 
     public LoginController(UserManager<IdentityUser> userManager,
         SignInManager<IdentityUser> signInManager)
     {
-        this._userManager = _userManager;
-        this._signInManager = _signInManager;
+        _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     [HttpPost]
