@@ -15,6 +15,7 @@
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Microsoft.NET.Test.Sdk": "17.10.0",
           "Moq": "4.20.70",
+          "NUnit": "4.1.0",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {

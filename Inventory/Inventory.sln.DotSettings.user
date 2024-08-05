@@ -13,5 +13,12 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ff1deed5_002D0cda_002D401c_002D8a31_002D30e937184d18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestLoginSuccessfully #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginSuccessfully&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertFromEntity_ShouldConvertCorrectly&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertFromEntity_ShouldReturnNullForNullEntity&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntity_ShouldConvertCorrectly&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntity_ShouldReturnNullForNullModel&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.ConvertToEntities_ShouldConvertAllModels&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntities_whenProductModelIsNull_SkipNullProduct_AndReturnProductEntityList&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

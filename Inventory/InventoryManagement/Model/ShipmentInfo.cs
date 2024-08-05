@@ -15,7 +15,7 @@ public class ShipmentInfo
     
     private Address _ShippingAddress { get; set; }
 
-    private List<Notes> ShippingNotes { get; set; } = new List<Notes>();
+    private List<Notes> ShippingNotes { get; set; }
 
     public ShipmentInfo(DateTime? shippedDate, DateTime? deliveredDate)
     {

@@ -21,7 +21,12 @@ public class Product
         _Category = category;
     }
 
-    public int Id
+    public Product()
+    {
+        
+    }
+
+public int Id
     {
         get { return _Id;  }
         set { _Id = value; }
@@ -31,6 +36,36 @@ public class Product
     {
         get { return _Name; }
         set { _Name = value; }
+    }
+
+    public string SKU
+    {
+        get { return _SKU; }
+        set { _SKU = value; }
+    }
+
+    public string Description
+    {
+        get { return _Description; }
+        set { _Description = value; }
+    }
+
+    public decimal Price
+    {
+        get { return _Price; }
+        set { _Price = value; }
+    }
+
+    public decimal Quantity
+    {
+        get { return _Quantity;  }
+        set { _Quantity = value; }
+    }
+
+    public string Category
+    {
+        get { return _Category; }
+        set { _Category = value; }
     }
     
 }

@@ -17,7 +17,23 @@ public class Order
     private Address _BillingAddress { get; set; }
     private PaymentMethod _PaymentMethod { get; set; }
     private ShipmentInfo _shipmentInfo { get; set; }
+
+    public Order(int orderId, string orderNumber, DateTime orderDate, OrderStatus orderStatus, OrderType orderType, Customer customer, Supplier supplier, List<OrderItem> items, OrderCriteria orderCriteria, Address shippingAddress, Address billingAddress, PaymentMethod paymentMethod, ShipmentInfo shipmentInfo)
+    {
+        _OrderId = orderId;
+        _OrderNumber = orderNumber;
+        _OrderDate = orderDate;
+        _OrderStatus = orderStatus;
+        _OrderType = orderType;
+        _Customer = customer;
+        _supplier = supplier;
+        _Items = items;
+        _orderCriteria = orderCriteria;
+        _ShippingAddress = shippingAddress;
+        _BillingAddress = billingAddress;
+        _PaymentMethod = paymentMethod;
+        _shipmentInfo = shipmentInfo;
+    }
     
-
-
+    
 }

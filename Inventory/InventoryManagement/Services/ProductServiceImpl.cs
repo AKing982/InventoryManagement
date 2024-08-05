@@ -1,4 +1,5 @@
-﻿using InventoryManagement.domain;
+﻿using InventoryManagement.DataModel;
+using InventoryManagement.domain;
 using InventoryManagement.Model;
 using InventoryManagement.Repository;
 
@@ -12,7 +13,8 @@ public class ProductServiceImpl : IProductService
     {
         _repository = repository;
     }
-    
+
+
     public Task<IEnumerable<Product>> GetByCategoryAsync(string category)
     {
         throw new NotImplementedException();
@@ -33,37 +35,32 @@ public class ProductServiceImpl : IProductService
         throw new NotImplementedException();
     }
 
-    public Task<Product> GetByIdAsync(int id)
-    {
-        return _repository.GetByIdAsync(id);
-    }
-
-    public Task<IEnumerable<Product>> GetAllAsync()
-    {
-        return _repository.GetAllAsync();
-    }
-
-    public Task<int> AddAsync(Product entity)
-    {
-        return _repository.AddAsync(entity);
-    }
-
-    public Task<int> AddAsync(ProductDTO entity)
+    public Task<ProductEntity> GetByIdAsync(int id)
     {
         throw new NotImplementedException();
     }
 
-    public Task UpdateAsync(Product entity)
+    public Task<IEnumerable<ProductEntity>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteAsync(Product entity)
+    public Task<int> AddAsync(ProductEntity entity)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<Product>> SearchAsync(string searchTerm)
+    public Task UpdateAsync(ProductEntity entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task DeleteAsync(ProductEntity entity)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<IEnumerable<ProductEntity>> SearchAsync(string searchTerm)
     {
         throw new NotImplementedException();
     }

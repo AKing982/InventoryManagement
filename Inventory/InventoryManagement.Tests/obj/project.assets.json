@@ -993,7 +993,7 @@
           }
         },
         "build": {
-          "build/_._": {}
+          "build/NUnit.props": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/5.0.0": {
@@ -2634,7 +2634,8 @@
       "MSTest.TestFramework >= 3.5.0",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.NET.Test.Sdk >= 17.10.0",
-      "Moq >= 4.20.70"
+      "Moq >= 4.20.70",
+      "NUnit >= 4.1.0"
     ]
   },
   "packageFolders": {
@@ -2704,6 +2705,10 @@
           "Moq": {
             "target": "Package",
             "version": "[4.20.70, )"
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[4.1.0, )"
           }
         },
         "imports": [

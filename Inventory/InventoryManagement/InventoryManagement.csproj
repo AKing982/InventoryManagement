@@ -35,7 +35,7 @@
     
 
     <ItemGroup>
-      <Folder Include="Workbench\" />
+      <Folder Include="Exceptions\" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

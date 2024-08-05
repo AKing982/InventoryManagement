@@ -24,12 +24,9 @@ public class ProductEntity
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Price { get; set; }
     
-    public int Quantity { get; set; }
+    public decimal Quantity { get; set; }
     
-    [ForeignKey("Category")]
-    public int categoryId { get; set; }
-    
-  //  public virtual CategoryEntity CategoryEntity { get; set; }
+    public string category { get; set; }
     
     public DateTime CreatedAt { get; set; }
     

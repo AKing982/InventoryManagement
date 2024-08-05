@@ -33,7 +33,6 @@ public class InventoryController : Controller
     [HttpPost]
     public async Task<ActionResult<int>> AddInventory([FromBody] InventoryDTO inventoryEntity)
     {
-        var result = await _inventoryService.AddAsync(inventoryEntity);
-        return Ok(result);
+        return null;
     }
 }

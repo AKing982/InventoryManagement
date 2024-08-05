@@ -1,86 +1,107 @@
-﻿using InventoryManagement.Controllers;
+﻿using System.Collections.Generic;
+using System.Linq;
+using InventoryManagement.Controllers;
 using InventoryManagement.Model;
-using InventoryManagement.Services;
-using Microsoft.AspNetCore.Mvc;
 using Moq;
 using NUnit.Framework;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using InventoryManagement.DataModel;
+using InventoryManagement.Services;
+using InventoryManagement.Workbench.Converter;
 
 namespace InventoryManagement.Tests.Controllers;
 
 [TestFixture]
+[TestOf(typeof(ProductsController))]
 public class ProductsControllerTest
 {
     private Mock<IProductService> _productServiceMock;
     private ProductsController _productsController;
+    private Product _product;
 
     [SetUp]
-    public void Setup()
+    public void SetUp()
     {
         _productServiceMock = new Mock<IProductService>();
         _productsController = new ProductsController(_productServiceMock.Object);
+        _product = new Product
+        {
+            Id = 1,
+            Name = "Test Product",
+            SKU = "TP01",
+            Description = "This is a test product",
+            Price = 10.0m,
+            Quantity = 10.0m,
+            Category = "Test Category"
+        };
     }
 
+    // Testing CreateProduct method
     [Test]
-    public async Task CreateProduct_ShouldReturnCreatedAtActionResult()
+    public async Task CreateProduct_CreatesANewProduct_ReturnsProduct()
     {
-        var product = new Product(1, "Test", "TestSKU", "Description", 10, 2, "Category");
-        _productServiceMock.Setup(service => service.AddAsync(product)).Returns(Task.FromResult(1));
+        _productServiceMock.Setup(ps => ps.AddAsync(It.IsAny<ProductEntity>())).Returns(Task.FromResult(1));
 
-        var result = await _productsController.CreateProduct(product);
+        var result = await _productsController.CreateProduct(_product);
 
-        Assert.That(result.Result, Is.InstanceOf<CreatedAtActionResult>());
+        Assert.That(result.Value, Is.EqualTo(_product));
     }
 
+    // Testing GetProducts method
     [Test]
-    public async Task GetProducts_ShouldReturnOkObjectResult()
+    public async Task GetProducts_ReturnsAllProducts_ReturnsProductList()
     {
-        _productServiceMock.Setup(service => service.GetAllAsync()).Returns(
-            Task.FromResult<IEnumerable<Product>>(new Product[]
-                { new Product(1, "Test", "TestSKU", "Description", 10, 2, "Category") }));
+        var products = new List<Product> { _product };
+        var productConverter = new ProductConverter();
+
+        var productEntities = productConverter.ConvertToEntities(products);
+        
+        _productServiceMock.Setup(ps => ps.GetAllAsync()).Returns(Task.FromResult(productEntities));
 
         var result = await _productsController.GetProducts();
 
-        Assert.That(result.Result, Is.InstanceOf<OkObjectResult>());
+        Assert.That(result.Value.Count(), Is.EqualTo(1));
+        Assert.That(result.Value.First(), Is.EqualTo(_product));
+    }
+
+    // Testing UpdateProduct method
+    [Test]
+    public async Task UpdateProduct_WhenProductExists_UpdatesProduct()
+    {
+        _productServiceMock.Setup(ps => ps.UpdateAsync(It.IsAny<ProductEntity>())).Returns(Task.CompletedTask);
+
+        var result = await _productsController.UpdateProduct(1, _product);
+        
+        Assert.That(result, Is.InstanceOf<OkResult>());
     }
 
     [Test]
-    public async Task UpdateProduct_ShouldReturnNoContentResult()
+    public async Task UpdateProduct_WhenProductIdMismatch_ReturnsBadRequest()
     {
-        var product = new Product(1, "Test", "TestSKU", "Description", 10, 2, "Category");
-        _productServiceMock.Setup(service => service.UpdateAsync(product)).Returns(Task.CompletedTask);
+        var result = await _productsController.UpdateProduct(2, _product);
 
-        var result = await _productsController.UpdateProduct(1, product);
-
-        
-        Assert.That(result, Is.InstanceOf<NoContentResult>());
-        _productServiceMock.Verify(service => service.UpdateAsync(product), Times.Once);
-        
+        Assert.That(result, Is.InstanceOf<BadRequestResult>());
     }
 
+    // Testing GetProduct method
     [Test]
-    public async Task GetProduct_ShouldReturnOkObjectResult()
+    public async Task GetProduct_WhenProductExists_ReturnsProduct()
     {
-        var product = new Product(1, "Test", "TestSKU", "Description", 10, 2, "Category");
-        _productServiceMock.Setup(service => service.GetByIdAsync(1)).Returns(Task.FromResult(product));
+        _productServiceMock.Setup(ps => ps.GetByIdAsync(It.IsAny<int>())).Returns(Task.FromResult(_product));
 
         var result = await _productsController.GetProduct(1);
 
-        // Assert
-        Assert.That(result.Result, Is.InstanceOf<OkObjectResult>());
-        var okResult = result.Result as OkObjectResult;
-        Assert.That(okResult, Is.Not.Null);
-        Assert.That(okResult.Value, Is.EqualTo(product));
+        Assert.That(result.Value, Is.EqualTo(_product));
     }
 
     [Test]
-    public async Task GetProduct_ShouldReturnNotFoundResult_WhenProductDoesNotExist()
+    public async Task GetProduct_WhenProductNotFound_ReturnsNotFoundResult()
     {
-        _productServiceMock.Setup(service => service.GetByIdAsync(1)).Returns(Task.FromResult<Product>(null));
+        _productServiceMock.Setup(ps => ps.GetByIdAsync(It.IsAny<int>())).Returns(Task.FromResult<ProductEntity>(null));
 
         var result = await _productsController.GetProduct(1);
 
-        Assert.That(result.Result, Is.InstanceOf<NotFoundResult>());
+        Assert.That(result, Is.InstanceOf<NotFoundResult>());
     }
 }

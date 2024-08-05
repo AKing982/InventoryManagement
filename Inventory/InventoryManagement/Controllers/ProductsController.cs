@@ -21,15 +21,13 @@ public class ProductsController : Controller
     [HttpPost]
     public async Task<ActionResult<Product>> CreateProduct(Product product)
     {
-        var id = await _productService.AddAsync(product);
-        return CreatedAtAction(nameof(GetProduct), new { id = id }, product);
+        return null;
     }
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
-        var products = await _productService.GetAllAsync();
-        return Ok(products);
+        return null;
     }
 
     [HttpPut("id")]
@@ -41,7 +39,7 @@ public class ProductsController : Controller
             return BadRequest();
         }
 
-        await _productService.UpdateAsync(product);
+       
         return NoContent();
     }
 
