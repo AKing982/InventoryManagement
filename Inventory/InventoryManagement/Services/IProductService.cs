@@ -6,7 +6,7 @@ namespace InventoryManagement.Services;
 
 public interface IProductService : ServiceBase<ProductEntity>
 {
-    Task<IEnumerable<Product>> GetByCategoryAsync(string category);
+    Task<IEnumerable<ProductEntity>> GetByCategoryAsync(string category);
     Task<bool> IsSkuUniqueAsync(string sku);
     Task UpdateQuantityAsync(int productId, int quantityChange);
 
