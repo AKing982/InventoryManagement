@@ -2639,35 +2639,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexander King\\.nuget\\packages\\": {}
+    "/Users/alexking/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexander King\\Documents\\GitHub\\InventoryManagement\\Inventory\\InventoryManagement.Tests\\InventoryManagement.Tests.csproj",
+      "projectUniqueName": "/Users/alexking/Documents/GitHub/InventoryManagement/Inventory/InventoryManagement.Tests/InventoryManagement.Tests.csproj",
       "projectName": "InventoryManagement.Tests",
-      "projectPath": "C:\\Users\\Alexander King\\Documents\\GitHub\\InventoryManagement\\Inventory\\InventoryManagement.Tests\\InventoryManagement.Tests.csproj",
-      "packagesPath": "C:\\Users\\Alexander King\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexander King\\Documents\\GitHub\\InventoryManagement\\Inventory\\InventoryManagement.Tests\\obj\\",
+      "projectPath": "/Users/alexking/Documents/GitHub/InventoryManagement/Inventory/InventoryManagement.Tests/InventoryManagement.Tests.csproj",
+      "packagesPath": "/Users/alexking/.nuget/packages/",
+      "outputPath": "/Users/alexking/Documents/GitHub/InventoryManagement/Inventory/InventoryManagement.Tests/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
-        "C:\\Users\\Alexander King\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/alexking/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Alexander King\\Documents\\GitHub\\InventoryManagement\\Inventory\\InventoryManagement\\InventoryManagement.csproj": {
-              "projectPath": "C:\\Users\\Alexander King\\Documents\\GitHub\\InventoryManagement\\Inventory\\InventoryManagement\\InventoryManagement.csproj"
+            "/Users/alexking/Documents/GitHub/InventoryManagement/Inventory/InventoryManagement/InventoryManagement.csproj": {
+              "projectPath": "/Users/alexking/Documents/GitHub/InventoryManagement/Inventory/InventoryManagement/InventoryManagement.csproj"
             }
           }
         }
@@ -2722,12 +2720,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/Users/alexking/.dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,9 +13,8 @@ public class ProductServiceImpl : IProductService
     {
         _repository = repository;
     }
-
-
-    public Task<IEnumerable<Product>> GetByCategoryAsync(string category)
+    
+    public Task<IEnumerable<ProductEntity>> GetByCategoryAsync(string category)
     {
         throw new NotImplementedException();
     }

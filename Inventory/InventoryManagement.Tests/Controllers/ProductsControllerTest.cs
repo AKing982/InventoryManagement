@@ -88,7 +88,8 @@ public class ProductsControllerTest
     [Test]
     public async Task GetProduct_WhenProductExists_ReturnsProduct()
     {
-        _productServiceMock.Setup(ps => ps.GetByIdAsync(It.IsAny<int>())).Returns(Task.FromResult(_product));
+        ProductEntity productEntity = new ProductEntity();
+        _productServiceMock.Setup(ps => ps.GetByIdAsync(It.IsAny<int>())).Returns(Task.FromResult(productEntity));
 
         var result = await _productsController.GetProduct(1);
 

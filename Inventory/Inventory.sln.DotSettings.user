@@ -1,8 +1,30 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/ShowAdvancedOptions/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=AAC6C87A_002D5173_002D469E_002DA6ED_002D02615419B720/@EntryIndexedValue">C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=MSTest/@EntryIndexedValue">d6790ab7-33c2-4425-b2c9-51480cd1a852</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=NUnit3x/@EntryIndexedValue">db4927dd-2e12-48a7-9a84-2b7e3e31b9c8</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=085dd14f_002D0a16_002D4efe_002Db1b5_002Daf275b012017/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestLoginSuccessfully" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+<<<<<<< HEAD
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=085dd14f_002D0a16_002D4efe_002Db1b5_002Daf275b012017/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestLoginSuccessfully" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginSuccessfully&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginUnauthorized&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.ProductsControllerTest.GetProducts_ShouldReturnOkObjectResult&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.ProductsControllerTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ff1deed5_002D0cda_002D401c_002D8a31_002D30e937184d18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestLoginSuccessfully #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginSuccessfully&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertFromEntity_ShouldConvertCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertFromEntity_ShouldReturnNullForNullEntity&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntity_ShouldConvertCorrectly&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntity_ShouldReturnNullForNullModel&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.ConvertToEntities_ShouldConvertAllModels&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntities_whenProductModelIsNull_SkipNullProduct_AndReturnProductEntityList&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+=======
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=085dd14f_002D0a16_002D4efe_002Db1b5_002Daf275b012017/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestLoginSuccessfully" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginSuccessfully&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginUnauthorized&lt;/TestId&gt;&#xD;
@@ -10,7 +32,7 @@
     &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.ProductsControllerTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ff1deed5_002D0cda_002D401c_002D8a31_002D30e937184d18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestLoginSuccessfully #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ff1deed5_002D0cda_002D401c_002D8a31_002D30e937184d18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestLoginSuccessfully #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.LoginControllerTest.TestLoginSuccessfully&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertFromEntity_ShouldConvertCorrectly&lt;/TestId&gt;&#xD;
@@ -20,5 +42,7 @@
     &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.ConvertToEntities_ShouldConvertAllModels&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest.convertToEntities_whenProductModelIsNull_SkipNullProduct_AndReturnProductEntityList&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Workbench.Converter.ProductConverterTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::C3F5CEDA-71E1-4BDD-BEC1-EF0DF91235DB::net7.0::InventoryManagement.Tests.Controllers.ProductsControllerTest.GetProduct_WhenProductExists_ReturnsProduct&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+>>>>>>> d49f719e2e74c2c75d37f3430ddc6fca33d3bc77
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
